@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edf2f4;
+    margin: 0;
+    padding: 0;
+}
+
+/*Aca va clase Hover*/
+.Boton1 {
+    color: #33ff00;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.Boton1:hover {
+    color: #000000;
+    background-color: #33ff00;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Aca va clase Active*/
+.Boton2 {
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.Boton2:active {
+    color: #ff0000;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Aca va clase Checked*/
+.Boton3 {
+    margin-left: 25px;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  div,
+  select {
+    margin: 8px;
+  }
+  
+  /* Etiquetas para entradas marcadas */
+  input:checked + label {
+    color: #5bff29;
+  }
+  
+  /* Elemento Radio, cuando está marcado */
+  input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px #a4ff5a;
+  }
+  
+  /* Elementos Option, cuando se seleccionan */
+  option:checked {
+    box-shadow: 0 0 0 3px lime;
+    color: #73ff00;
+  }
+
+ /*Aca va clase display*/
+.Boton4 {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.Boton4:default {
+    box-shadow: 0 0 2px 1px coral;
+}
+
+.Boton4:default + label {
+    color: coral;
+}
+
