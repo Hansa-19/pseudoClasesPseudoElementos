@@ -199,3 +199,109 @@ p:first-child {
     background-color: black;
     padding: 5px;
   }
+
+  p:first-of-type {
+    color: red;
+    font-style: italic;
+  }  
+
+  .red-input:focus {
+    background: yellow;
+    color: red;
+  }
+  
+  .blue-input:focus {
+    background: yellow;
+    color: blue;
+  }  
+
+  input,
+button {
+  margin: 10px;
+}
+
+.focus-only:focus {
+  outline: 2px solid black;
+}
+
+.focus-visible-only:focus-visible {
+  outline: 4px dashed darkorange;
+}
+
+form {
+  border: 1px solid;
+  color: gray;
+  padding: 4px;
+}
+
+form:focus-within {
+  background: #ff8;
+  color: black;
+}
+
+input {
+  margin: 4px;
+}
+
+#fullscreen:fullscreen {
+  padding: 42px;
+  background-color: pink;
+  border: 2px solid #f00;
+  font-size: 200%;
+}
+
+#fullscreen:fullscreen > h1 {
+  color: red;
+}
+
+#fullscreen:fullscreen > p {
+  color: darkred;
+}
+
+#fullscreen:fullscreen > button {
+  display: none;
+}
+
+:future(p, span) {
+  display: none;
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h1:has(+ h2) {
+  margin: 0 0 0.25rem 0;
+}
+
+const style = document.createElement("style");
+const span = document.createElement("span");
+span.textContent = this.textContent;
+
+const shadowRoot = this.attachShadow({ mode: "open" });
+shadowRoot.appendChild(style);
+shadowRoot.appendChild(span);
+
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
+
+  const style = document.createElement("style");
+const span = document.createElement("span");
+span.textContent = this.textContent;
+
+const shadowRoot = this.attachShadow({ mode: "open" });
+shadowRoot.appendChild(style);
+shadowRoot.appendChild(span);
+
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
